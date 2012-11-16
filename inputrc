@@ -1,0 +1,12 @@
+# Hidden files are not shown in completion
+set match-hidden-files off
+
+# Ignore case when completion
+set completion-ignore-case on
+
+# Puts / after directory names and * after programs in completion
+set visible-stats on
+
+set input-meta on
+set output-meta on
+set convert-meta off
