@@ -101,7 +101,6 @@ if [ -d "$JMETER_HOME" ] ; then
 fi
 
 # Some more typical bin directories
-MORE_BIN=`find $HOME/Proyectos/Osoco/scripts/ -type d -maxdepth 1 -mindepth 1 -name "[a-z]*"`
 MORE_BIN="$MORE_BIN $HOME/Proyectos/personal/scripts $HOME/local/bin $HOME/bin /usr/local/bin /opt/bin"
 for bin in $MORE_BIN ; do 
 	if [ -d "$bin" ] ; then
@@ -115,3 +114,6 @@ export PATH
 # Set the editor as nano
 export EDITOR=/usr/bin/nano
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/deigote/.gvm/bin/gvm-init.sh" && -z $(which gvm-init.sh | grep '/gvm-init.sh') ]] && source "/Users/deigote/.gvm/bin/gvm-init.sh"

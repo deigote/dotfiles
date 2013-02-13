@@ -91,3 +91,6 @@ alias ssh-deigote-com-with-tunnel='ssh -p 443 -D 9999 -L 5901:0.0.0.:5901 deigot
 
 # More tweaks are located in .inputrc, check them out if copying 
 # this file to another machine
+
+# GMV stuff (must be at the end of the file)
+[[ -s "/Users/deigote/.gvm/bin/gvm-init.sh" && -z $(which gvm-init.sh | grep '/gvm-init.sh') ]] && source "/Users/deigote/.gvm/bin/gvm-init.sh"
