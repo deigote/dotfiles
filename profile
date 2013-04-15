@@ -17,7 +17,7 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # Java stuff
-export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8 -Xmx2048m -Xms256m -XX:PermSize=512M -XX:MaxPermSize=1024M"
+export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8 -Xmx2048m -Xms256m -XX:PermSize=512M -XX:MaxPermSize=2048M"
 JAVA_HOME=$HOME/local/jdk
 if [ ! -d "$JAVA_HOME" ] ; then
 	JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home/
@@ -100,8 +100,17 @@ if [ -d "$JMETER_HOME" ] ; then
         PATH="$JMETER_HOME/bin:$PATH"
 fi
 
+# PhoneGap stuff
+#PHONEGAP_HOME="$HOME/local/phonegap"
+#if [ -d "$PHONEGAP_HOME" ] ; then
+#	IFS=$'\n'
+#	for bin in `find "$PHONEGAP_HOME" -type d -name bin` ; do
+#		PATH="$bin:$PATH"
+#	done
+#fi
+
 # Some more typical bin directories
-MORE_BIN="$MORE_BIN $HOME/Proyectos/personal/scripts $HOME/local/bin $HOME/bin /usr/local/bin /opt/bin"
+MORE_BIN="$MORE_BIN $HOME/Proyectos/personal/scripts $HOME/local/bin $HOME/bin /usr/local/bin /opt/bin /usr/local/sbin"
 for bin in $MORE_BIN ; do 
 	if [ -d "$bin" ] ; then
 		PATH="$bin:$PATH"

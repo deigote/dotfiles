@@ -88,9 +88,10 @@ export IGNOREEOF=1
 alias ssh-deigote-com='ssh -p 443 deigote@deigote.com -t "screen -R deigote -d"'
 alias ssh-deigote-com-no-screen='ssh -p 443 deigote@deigote.com'
 alias ssh-deigote-com-with-tunnel='ssh -p 443 -D 9999 -L 5901:0.0.0.:5901 deigote@deigote.com'
+alias scp-torrents-to-deigote-com='scp -P 443 $HOME/Downloads/*.torrent deigote@deigote.com:/home/seedbox/downloads/auto-torrents/ && rm $HOME/Downloads/*.torrent'
 
 # More tweaks are located in .inputrc, check them out if copying 
 # this file to another machine
 
 # GMV stuff (must be at the end of the file)
-[[ -s "/Users/deigote/.gvm/bin/gvm-init.sh" && -z $(which gvm-init.sh | grep '/gvm-init.sh') ]] && source "/Users/deigote/.gvm/bin/gvm-init.sh"
+[[ -s "$HOME/.gvm/bin/gvm-init.sh" && -z $(which gvm-init.sh | grep '/gvm-init.sh') ]] && source "$HOME/.gvm/bin/gvm-init.sh"
