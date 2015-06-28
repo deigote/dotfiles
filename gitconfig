@@ -1,0 +1,27 @@
+[user]
+        name = deigote
+        email = diego@toharia.com
+
+[color]
+        diff = always
+	ui = true
+
+[alias]
+	ci = commit
+	st = status
+	changes = diff --name-status -r
+        realdiff = diff -w --ignore-all-space
+
+[github]
+	user = deigote
+
+[ghi]
+	token = !security find-generic-password -l ghi-token -w
+[push]
+	default = simple
+[rerere]
+	enabled = true
+[core]
+	editor = nano
+[rebase]
+	autosquash = true
